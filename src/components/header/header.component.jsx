@@ -4,12 +4,10 @@ import "./header.styles.scss";
 
 export default function Header() {
   return (
-    <nav className="nav-menu">
-      <ul className="menu-list">
+    <nav className="menu">
+      <ul className="menu__list">
         <li>
-          <a href="#">
-            <img src="#" alt="nav-logo"></img>
-          </a>
+          <a href="#">Logo</a>
         </li>
         <li>
           <a href="#">Women</a>
