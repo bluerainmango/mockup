@@ -1,0 +1,8 @@
+.nav-menu {
+  background-color: cadetblue;
+  &.menu-list {
+    display: flex;
+    flex-direction: row;
+    color: red;
+  }
+}
