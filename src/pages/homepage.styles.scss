@@ -1,11 +1,11 @@
-$color-primary: #10504f;
-$color-text-main: #fff;
-
-@mixin btn-style($color) {
-  width: 5rem;
-  height: 3rem;
+@mixin btn-style($bgColor, $textColor, $fontSize) {
+  padding: 7px 15px;
+  border: 1px solid black;
   text-align: center;
-  color: $color;
+  font-family: "Lato-Semibold";
+  color: $textColor;
+  background-color: $bgColor;
+  font-size: $fontSize;
 }
 
 @mixin respond($breakpoint) {
