@@ -1,6 +1,8 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+import Banner from "../banner/banner.component";
 import slideImg1 from "../../assets/images/hero-image-1.jpg";
 import slideImgMobile1 from "../../assets/images/hero-image-1-mobile.jpg";
 
@@ -55,24 +57,26 @@ const data = [
   },
 ];
 
-const slideGenerator = ({ img, imgMobile, title, tagline, callToAction }) => {
-  return (
-    <div className="slide">
-      <div className="slide__content">
-        <h1 className="slide__content--title">{title}</h1>
-        <p className="slide__content--tagline">{tagline}</p>
-        <a href="#" className="slide__content--link">
-          {callToAction}
-        </a>
-      </div>
-      <picture className="slide__img">
-        <source media="(max-width: 375px)" srcSet={imgMobile} />
-        <source srcSet={img} />
-        <img src={img} alt="slide-img"></img>
-      </picture>
-    </div>
-  );
-};
+// { img, imgMobile, title, tagline, callToAction }
+
+// const SlideGenerator = (props) => {
+//   return (
+//     <div className="slide">
+//       <div className="slide__content">
+//         <h1 className="slide__content--title">{props.title}</h1>
+//         <p className="slide__content--tagline">{props.tagline}</p>
+//         <a href="#" className="slide__content--link">
+//           {props.callToAction}
+//         </a>
+//       </div>
+//       <picture className="slide__img">
+//         <source media="(max-width: 375px)" srcSet={props.imgMobile} />
+//         <source srcSet={props.img} />
+//         <img src={props.img} alt="slide-img"></img>
+//       </picture>
+//     </div>
+//   );
+// };
 
 export default function Slide(props) {
   return (
@@ -96,16 +100,11 @@ export default function Slide(props) {
       itemClass="carousel-item-padding-40-px"
     >
       {data.map((info, i) => {
-        return <div key={`${info.img}-${i}`}>{slideGenerator(info)}</div>;
+        {
+          /* return <div key={`${info.img}-${i}`}>{SlideGenerator(info)}</div>; */
+        }
+        return <div key={`${info.img}-${i}`}>{<Banner {...info} />}</div>;
       })}
     </Carousel>
   );
 }
-
-// <div>
-//   <div className="slide__content">
-//     <h1>Title Goes Here</h1>
-//     <p>Tagline will go right here.</p>
-//     <a href="#">SHOP NOW</a>
-//   </div>
-// </div>

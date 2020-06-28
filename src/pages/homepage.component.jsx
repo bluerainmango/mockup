@@ -4,6 +4,7 @@ import Header from "../components/header/header.component";
 import Slide from "../components/slide/slide.component";
 import Collections from "../components/collections/collections.component";
 import Products from "../components/products/products.component";
+import Banner from "../components/banner/banner.component";
 
 function Homepage() {
   return (
@@ -13,6 +14,7 @@ function Homepage() {
       <Slide />
       <Collections />
       <Products />
+      <Banner />
     </div>
   );
 }
