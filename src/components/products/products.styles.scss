@@ -1,27 +1,79 @@
 @import "../../pages/homepage.styles.scss";
 
 .products {
-  max-width: 130rem;
-  margin: 0 auto;
+  margin: 3rem 0;
 
-  .product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .products__title {
+    @include text-title;
+    margin-bottom: 2rem;
+  }
 
-    &__img {
-      width: 70%;
-    }
+  .products__carousel {
+    max-width: 130rem;
+    margin: 0 auto;
 
-    &__content {
+    .product {
       display: flex;
       flex-direction: column;
       align-items: center;
-      list-style-type: none;
+
+      &__img {
+        width: 70%;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        margin-top: 1.5rem;
+      }
+
+      &__name {
+        font-family: "Lato-regular";
+        font-size: 1.5rem;
+        // font-weight: bolder;
+      }
+
+      &__collection {
+        font-size: 1.3rem;
+      }
+
+      &__price {
+        font-family: "Pacifico";
+        color: var(--color-main);
+        font-size: 1.8rem;
+        font-weight: lighter;
+        margin-top: 1rem;
+      }
     }
   }
 }
 
-.react-multiple-carousel__arrow--left,
+.react-multiple-carousel__arrow,
+.react-multiple-carousel__arrow:hover {
+  background: none;
+  width: 17px;
+  border-radius: 0;
+}
+
+.react-multiple-carousel__arrow--left {
+  left: 1.5rem;
+}
 .react-multiple-carousel__arrow--right {
+  right: 1.5rem;
+}
+
+@include respond(phone) {
+  .product {
+    &__name {
+      font-size: 2.5rem !important;
+    }
+    &__collection {
+      font-size: 2.3rem !important;
+    }
+    &__price {
+      font-size: 3rem !important;
+    }
+  }
 }

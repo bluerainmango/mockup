@@ -4,8 +4,8 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-import "./fonts/pacifico-font/Pacifico.ttf";
-import "./fonts/lato/Lato-Thin.ttf";
+import "./assets/fonts/pacifico-font/Pacifico.ttf";
+import "./assets/fonts/lato/Lato-Thin.ttf";
 
 ReactDOM.render(
   <React.StrictMode>

@@ -47,6 +47,12 @@ html {
     url(./assets/fonts/lato/Lato-Semibold.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Lato-Regular";
+  src: local("Lato-Regular"),
+    url(./assets/fonts/lato/Lato-Regular.ttf) format("truetype");
+}
+
 body {
   box-sizing: border-box;
   font-family: "Lato-Thin";
