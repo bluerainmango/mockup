@@ -7,25 +7,35 @@
   background-color: $bgColor;
   font-size: $fontSize;
 }
+@mixin text-title() {
+  color: var(--color-text-main);
+  font-family: var(--font-bold);
+  font-size: 4rem;
+  font-weight: lighter;
+}
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
+      // 600px
       @content;
     }
   }
   @if $breakpoint == tab-port {
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 56.25em) {
+      //900px
       @content;
     }
   }
   @if $breakpoint == tab-land {
     @media only screen and (max-width: 75em) {
+      //1200px
       @content;
     }
   }
   @if $breakpoint == big-desktop {
     @media only screen and (max-width: 112.5em) {
+      //1800px
       @content;
     }
   }

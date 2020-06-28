@@ -1,0 +1,45 @@
+@import "../../pages/homepage.styles.scss";
+
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+
+  &__top {
+    display: flex;
+  }
+
+  @include respond(phone) {
+    flex-wrap: wrap;
+
+    &__bottom {
+      width: 100vw;
+    }
+  }
+}
+
+.card {
+  margin: 2rem 1.5rem 0 1.5rem;
+  position: relative;
+
+  &__img {
+    width: 100%;
+  }
+
+  &__name {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 15%;
+    width: 100%;
+    text-align: center;
+    @include text-title;
+    background-color: var(--color-main);
+  }
+
+  @include respond(phone) {
+    margin-top: 1.5rem;
+  }
+}

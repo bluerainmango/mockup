@@ -66,8 +66,8 @@ const slideGenerator = ({ img, imgMobile, title, tagline, callToAction }) => {
         </a>
       </div>
       <picture className="slide__img">
-        <source media="(max-width: 375px)" srcset={imgMobile} />
-        <source srcset={img} />
+        <source media="(max-width: 375px)" srcSet={imgMobile} />
+        <source srcSet={img} />
         <img src={img} alt="slide-img"></img>
       </picture>
     </div>
@@ -82,7 +82,7 @@ export default function Slide(props) {
       draggable={false}
       showDots={true}
       responsive={responsive}
-      ssr={true} // means to render carousel on server-side.
+      ssr={true}
       infinite={true}
       autoPlay={true}
       autoPlaySpeed={2000}

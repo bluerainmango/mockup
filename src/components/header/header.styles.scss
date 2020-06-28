@@ -14,14 +14,15 @@
     margin: 0 auto;
     list-style-type: none;
     color: var(--color-text-main);
+    font-size: 2rem;
 
     li {
-      padding: 0 1.2rem;
+      padding: 0 1.5rem;
 
       &:first-child {
-        font-size: 2rem;
+        font-size: 4rem;
         font-family: "Pacifico";
-        transform: translateY(-0.3rem);
+        transform: translateY(-0.7rem);
       }
     }
   }
