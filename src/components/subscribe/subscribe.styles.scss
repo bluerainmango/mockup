@@ -42,6 +42,7 @@
 
         &::placeholder {
           color: var(--color-text-grey);
+          font-size: smaller;
         }
       }
 
@@ -50,7 +51,6 @@
         color: #fff;
         background: var(--color-main);
         padding: 0.2em 3.3em;
-        //   font-family: "Pacifico";
         @include text-headline;
         font-size: 1.5rem;
       }
@@ -68,13 +68,9 @@
     &__content {
       text-align: center;
       flex-direction: column;
-      //   align-content: stretch;
-      //   align-items: stretch;
-      //   width: 100%;
 
       p {
         padding-right: 0;
-        // flex: 1;
         max-width: unset;
         margin-bottom: 4rem;
         color: var(--color-text-grey);
@@ -82,11 +78,10 @@
 
       form {
         width: 100%;
-        // margin: 0 auto;
         justify-content: center;
 
         input {
-          width: 10em;
+          // width: 10em;
           padding: 0.5em;
         }
       }

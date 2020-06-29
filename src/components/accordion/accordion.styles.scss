@@ -1,0 +1,43 @@
+@import "../../pages/homepage.styles.scss";
+
+.list {
+  display: none;
+  position: relative;
+}
+
+.accordion {
+  position: relative;
+
+  h4 {
+    font-size: 2.7rem;
+  }
+
+  li {
+    font-size: 2.3rem !important;
+    line-height: 1.5;
+  }
+}
+
+.plus::after {
+  content: "+";
+  position: absolute;
+  top: -11px;
+  right: 9px;
+  font-size: 3rem;
+  font-family: "Pacifico";
+  color: var(--color-text-main);
+}
+
+.active {
+  display: block;
+
+  &::before {
+    content: "-";
+    position: absolute;
+    top: -25px;
+    right: 11px;
+    font-size: 3rem;
+    font-family: "Pacifico";
+    color: var(--color-text-main);
+  }
+}

@@ -1,0 +1,74 @@
+@import "../../pages/homepage.styles.scss";
+
+.footer {
+  display: flex;
+  background-color: var(--color-black);
+  color: var(--color-text-main);
+  padding: 5rem;
+
+  &__menu {
+    margin-right: auto;
+  }
+
+  &__social {
+    width: 12rem;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+
+    img {
+      height: 2.5rem;
+    }
+  }
+
+  .links {
+    display: flex;
+
+    &__customer {
+      margin-right: 5rem;
+    }
+
+    &__company {
+      margin-right: auto;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      font-family: "Lato-Regular";
+      color: var(--color-text-grey);
+      line-height: 2;
+      font-size: 1.3rem;
+    }
+  }
+
+  h4 {
+    @include text-headline;
+    font-size: 2.7rem;
+  }
+}
+
+@include respond(phone) {
+  .footer {
+    flex-direction: column;
+    padding-left: 11rem;
+    padding-right: 11rem;
+
+    &__menu {
+      margin-right: 0;
+    }
+
+    &__social {
+      margin-top: 2rem;
+
+      h4 {
+        font-size: 2.7rem;
+      }
+    }
+  }
+}
