@@ -6,6 +6,7 @@ import Collections from "../components/collections/collections.component";
 import Products from "../components/products/products.component";
 import MiddleBanner from "../components/middle-banner/middle-banner.component";
 import IgCarousel from "../components/ig-carousel/ig-carousel.component";
+import Subscribe from "../components/subscribe/subscribe.component";
 
 function Homepage() {
   return (
@@ -17,6 +18,7 @@ function Homepage() {
       <Products />
       <MiddleBanner />
       <IgCarousel />
+      <Subscribe />
     </div>
   );
 }
