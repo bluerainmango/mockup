@@ -5,9 +5,17 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  padding: 0.1rem 0;
+  padding: 0.1rem 3rem;
 
-  .menu__list {
+  &__burger,
+  &__cart {
+    display: none;
+    width: 4rem;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__list {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,17 +24,68 @@
     color: var(--color-text-main);
     font-size: 2rem;
 
+    &--mobile {
+      font-size: 5rem;
+      position: fixed;
+      top: 0;
+      z-index: 9999;
+      line-height: 10rem;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--color-main);
+
+      .close {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        font-size: 8rem;
+        color: var(--color-text-main);
+      }
+
+      ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style-type: none;
+        color: var(--color-text-main);
+      }
+    }
+
     li {
       padding: 0 1.5rem;
 
-      &:first-child {
-        font-size: 4rem;
-        font-family: "Pacifico";
-        transform: translateY(-0.7rem);
+      &:first-child img {
+        width: 7rem;
+        margin: 1rem;
       }
 
       a {
         color: var(--color-text-main);
+        font-size: 2.8rem;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@include respond(phone) {
+  .menu {
+    &__burger,
+    &__cart {
+      display: block;
+    }
+
+    &__list {
+      // &--mobile {
+      //   display: block;
+      // }
+
+      li:not(:first-child) {
+        display: none;
       }
     }
   }
