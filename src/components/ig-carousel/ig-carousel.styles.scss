@@ -1,0 +1,18 @@
+@import "../../pages/homepage.styles.scss";
+
+.ig {
+  margin: 2rem 0;
+
+  &__title {
+    @include text-title();
+  }
+
+  &__carousel {
+    margin: 0 1.5rem;
+  }
+
+  &__img {
+    width: 100%;
+    padding: 1rem;
+  }
+}

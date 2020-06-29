@@ -5,6 +5,7 @@ import Slide from "../components/slide/slide.component";
 import Collections from "../components/collections/collections.component";
 import Products from "../components/products/products.component";
 import MiddleBanner from "../components/middle-banner/middle-banner.component";
+import IgCarousel from "../components/ig-carousel/ig-carousel.component";
 
 function Homepage() {
   return (
@@ -15,6 +16,7 @@ function Homepage() {
       <Collections />
       <Products />
       <MiddleBanner />
+      <IgCarousel />
     </div>
   );
 }
