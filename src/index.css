@@ -12,10 +12,10 @@
 
   --color-text-main: #fff;
   --color-text-sub: rgba(255, 255, 255, 0.845);
-  --color-text-grey: rgb(194, 194, 194);
+  --color-text-grey: rgb(131, 131, 131);
 
   --font-bold: "Pacifico";
-  --font-main: "Lato-Thin";
+  --font-main: "Lato-Light";
 
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
@@ -43,6 +43,12 @@ html {
 }
 
 @font-face {
+  font-family: "Lato-Light";
+  src: local("Lato-Light"),
+    url(./assets/fonts/lato/Lato-Light.ttf) format("truetype");
+}
+
+@font-face {
   font-family: "Lato-Semibold";
   src: local("Lato-Semibold"),
     url(./assets/fonts/lato/Lato-Semibold.ttf) format("truetype");
@@ -56,9 +62,9 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Lato-Thin";
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  font-family: "Lato-Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a,
@@ -66,7 +72,7 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
-  color: inherit;
+  color: #fff;
 }
 
 /* code {

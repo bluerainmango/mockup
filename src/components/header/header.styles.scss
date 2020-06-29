@@ -13,6 +13,7 @@
     width: 4rem;
     height: auto;
     object-fit: contain;
+    cursor: pointer;
   }
 
   &__list {
@@ -23,6 +24,7 @@
     list-style-type: none;
     color: var(--color-text-main);
     font-size: 2rem;
+    font-family: "Lato-Light";
 
     &--mobile {
       font-size: 5rem;

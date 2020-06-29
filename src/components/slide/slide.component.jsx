@@ -12,17 +12,14 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 1,
-    // slidesToSlide: 3, // optional, default to 1.
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 1,
-    // slidesToSlide: 2, // optional, default to 1.
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    // slidesToSlide: 1, // optional, default to 1.
   },
 };
 
@@ -69,27 +66,6 @@ const data = [
   },
 ];
 
-// { img, imgMobile, title, tagline, callToAction }
-
-// const SlideGenerator = (props) => {
-//   return (
-//     <div className="slide">
-//       <div className="slide__content">
-//         <h1 className="slide__content--title">{props.title}</h1>
-//         <p className="slide__content--tagline">{props.tagline}</p>
-//         <a href="#" className="slide__content--link">
-//           {props.callToAction}
-//         </a>
-//       </div>
-//       <picture className="slide__img">
-//         <source media="(max-width: 375px)" srcSet={props.imgMobile} />
-//         <source srcSet={props.img} />
-//         <img src={props.img} alt="slide-img"></img>
-//       </picture>
-//     </div>
-//   );
-// };
-
 export default function Slide(props) {
   return (
     <Carousel
@@ -101,7 +77,7 @@ export default function Slide(props) {
       ssr={true}
       infinite={true}
       autoPlay={true}
-      autoPlaySpeed={2000}
+      autoPlaySpeed={1000}
       keyBoardControl={true}
       customTransition="all .5"
       transitionDuration={500}
@@ -112,9 +88,6 @@ export default function Slide(props) {
       itemClass="carousel-item-padding-40-px"
     >
       {data.map((info, i) => {
-        {
-          /* return <div key={`${info.img}-${i}`}>{SlideGenerator(info)}</div>; */
-        }
         return <div key={`${info.img}-${i}`}>{<Banner {...info} />}</div>;
       })}
     </Carousel>

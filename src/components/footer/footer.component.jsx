@@ -32,7 +32,7 @@ export default function Footer() {
       document.body.clientWidth;
 
     // console.log("😊 width: ", w);
-    w >= 400 ? setAccordionFooter(false) : setAccordionFooter(true);
+    w >= 600 ? setAccordionFooter(false) : setAccordionFooter(true);
   };
 
   //! Measure window's width whenever resizing

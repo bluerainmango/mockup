@@ -32,11 +32,11 @@
       &__name {
         font-family: "Lato-regular";
         font-size: 1.5rem;
-        // font-weight: bolder;
       }
 
       &__collection {
         font-size: 1.3rem;
+        color: var(--color-text-grey);
       }
 
       &__price {

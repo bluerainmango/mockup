@@ -1,7 +1,8 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import productImg from "../../assets/images/product-image-1.jpg";
+
+import data from "./product.data";
 import rightArrow from "../../assets/images/arrow-right.png";
 import leftArrow from "../../assets/images/arrow-left.png";
 
@@ -24,33 +25,6 @@ const responsive = {
     // slidesToSlide: 1, // optional, default to 1.
   },
 };
-
-const data = [
-  {
-    img: productImg,
-    name: "Product Title",
-    collection: "Women's T-Shirt",
-    price: "$19.99",
-  },
-  {
-    img: productImg,
-    name: "Product Title 2",
-    collection: "Women's T-Shirt",
-    price: "$19.99",
-  },
-  {
-    img: productImg,
-    name: "Product Title 3",
-    collection: "Women's T-Shirt",
-    price: "$19.99",
-  },
-  {
-    img: productImg,
-    name: "Product Title 4",
-    collection: "Women's T-Shirt",
-    price: "$19.99",
-  },
-];
 
 const productGenerator = ({ img, name, collection, price }) => {
   return (
@@ -104,7 +78,7 @@ export default function Products(props) {
         ssr={true}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={2000}
+        autoPlaySpeed={1000}
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
