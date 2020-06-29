@@ -3,11 +3,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import socialImg1 from "../../assets/images/social-1.jpg";
-import socialImg2 from "../../assets/images/social-2.jpg";
-import socialImg3 from "../../assets/images/social-3.jpg";
-import socialImg4 from "../../assets/images/social-4.jpg";
-import socialImg5 from "../../assets/images/social-5.jpg";
+import data from "./ig-carousel.data";
 
 import "./ig-carousel.styles.scss";
 
@@ -25,29 +21,6 @@ const responsive = {
     items: 3,
   },
 };
-
-const data = [
-  {
-    img: socialImg1,
-    url: "#",
-  },
-  {
-    img: socialImg2,
-    url: "#",
-  },
-  {
-    img: socialImg3,
-    url: "#",
-  },
-  {
-    img: socialImg4,
-    url: "#",
-  },
-  {
-    img: socialImg5,
-    url: "#",
-  },
-];
 
 const postGenerator = ({ img, url }) => (
   <img src={img} className="ig__img" alt={img} />
