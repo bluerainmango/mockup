@@ -53,6 +53,8 @@
 .react-multiple-carousel__arrow,
 .react-multiple-carousel__arrow:hover {
   background: none;
+  min-width: unset;
+  min-height: unset;
   width: 17px;
   border-radius: 0;
 }
