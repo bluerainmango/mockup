@@ -82,10 +82,6 @@
     }
 
     &__list {
-      // &--mobile {
-      //   display: block;
-      // }
-
       li:not(:first-child) {
         display: none;
       }

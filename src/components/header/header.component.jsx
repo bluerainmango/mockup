@@ -15,11 +15,6 @@ export default function Header() {
   };
 
   const handleClickShow = (e) => {
-    console.log(
-      "🍔 clicked burger menu: ",
-      e.target,
-      mobileMenu.current.classList
-    );
     mobileMenu.current.classList.remove("hidden");
   };
 
